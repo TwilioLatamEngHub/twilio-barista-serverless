@@ -1,0 +1,22 @@
+{
+  "name": "twilio-barista-serverless",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "twilio-run",
+    "deploy": "twilio-run deploy"
+  },
+  "dependencies": {
+    "@twilio/runtime-handler": "1.2.4",
+    "crypto": "^1.0.1",
+    "moment": "^2.29.4",
+    "twilio": "^3.56"
+  },
+  "devDependencies": {
+    "twilio-run": "^3.4.3"
+  },
+  "engines": {
+    "node": "14"
+  }
+}
