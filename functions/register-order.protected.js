@@ -3,6 +3,11 @@ const {
     createOrderItem
   } = require(Runtime.getFunctions()['utils/order'].path);
 
+const { 
+    registerTagForBinding,
+    updateBindingSidForCustomer
+  } = require(Runtime.getFunctions()['utils/helpers'].path);
+
 exports.handler = async function(context, event, callback) {
   
     const { coffeeOrder, eventId } = event;
@@ -28,6 +33,12 @@ exports.handler = async function(context, event, callback) {
       .catch(err => console.log(err));
 
     await addOrderToList(eventId, orderItem, 'allOrders', context);
+
+    await registerTagForBinding(customer.bindingSid, 'open-order', context);
+
+    await updateBindingSidForCustomer({data: customer, key: customer.identity}, sid, context);
+
+
 
 
 

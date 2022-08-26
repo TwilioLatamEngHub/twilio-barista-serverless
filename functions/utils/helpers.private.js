@@ -139,10 +139,13 @@ function getCustomerInformation({ From, To, FromCountry }) {
     return sid;
   }
 
+  async function registerOrder()
+
   module.exports = {
     getCustomerInformation,
     findOrCreateCustomer,
     registerAddress,
     updateBindingSidForCustomer,
-    setEventForCustomer
+    setEventForCustomer,
+    registerTagForBinding
   }
