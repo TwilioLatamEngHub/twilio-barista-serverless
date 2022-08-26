@@ -34,9 +34,9 @@ exports.handler = async function(context, event, callback) {
 
     await addOrderToList(eventId, orderItem, 'allOrders', context);
 
-    await registerTagForBinding(customer.bindingSid, 'open-order', context);
+    //await registerTagForBinding(customer.bindingSid, 'open-order', context);
 
-    await updateBindingSidForCustomer({data: customer, key: customer.identity}, sid, context);
+    //await updateBindingSidForCustomer({data: customer, key: customer.identity}, sid, context);
 
 
 
