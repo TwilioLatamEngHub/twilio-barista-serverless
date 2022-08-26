@@ -138,9 +138,6 @@ function getCustomerInformation({ From, To, FromCountry }) {
                 .create(newBindingData);
     return sid;
   }
-
-  async function registerOrder()
-
   module.exports = {
     getCustomerInformation,
     findOrCreateCustomer,
