@@ -23,8 +23,6 @@ exports.handler = async function(context, event, callback) {
 
     customer.openOrders.push(orderEntry.index);
 
-    console.log(customer);
-
     await client.sync.v1.services(SYNC_SERVICE_SID)
       .syncMaps('customers')
       .syncMapItems(customer.identity)
@@ -69,5 +67,5 @@ exports.handler = async function(context, event, callback) {
       );*/
   
   
-    callback(null, customer);
+    callback(null, orderEntry);
   };
